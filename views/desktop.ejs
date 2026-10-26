@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Hardware - AWD Desktop</title>
+
+    <!-- ICONOS Y FUENTES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- ENLACE AL ARCHIVO CSS EN LA MISMA CARPETA VIEWS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header-principal">
+        <div class="grupo-izquierdo">
+            <button id="btn-abrir-menu" class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="logo"><i class="fa-solid fa-server"></i><h1>Hardware.p (Desktop)</h1></div>
+        </div>
+        <nav id="menu-lateral" class="panel-navegacion">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="btn-cerrar-menu" class="btn-cerrar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="enlaces-menu">
+                <a href="#">Catálogo</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Soporte</a>
+            </div>
+            <hr class="separador">
+            <!--MENU LATERAL CON FILTROS-->
+            <div class="filtros-menu">
+                <h2>Filtros Avanzados</h2>
+                <div class="grupo-filtro">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> Procesadores (CPU)</label>
+                    <label><input type="checkbox"> Memoria RAM (ECC)</label>
+                    <label><input type="checkbox"> Almacenamiento NVMe</label>
+                </div>
+                <!-- COMPONENTE PESADO EXCLUSIVO DE DESKTOP -->
+                <div class="grupo-filtro">
+                    <h3>Gráfico de Comparativa</h3>
+                    <div class="grafico-pesado">[Gráfico Canvas/SVG pesado renderizado en servidor]</div>
+                </div>
+                <button class="btn-aplicar">Aplicar Filtros</button>
+            </div>
+        </nav>
+        <div class="iconos-usuario">
+            <a href="#" class="btn-carrito"><i class="fa-solid fa-shopping-cart"></i></a>
+            <a href="#" class="avatar-icono"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <div class="contenedor-layout">
+        <main class="contenedor-productos">
+            <% productos.forEach(prod => { %>
+                <article class="tarjeta-producto">
+                    <div class="imagen-producto">
+                        <img src="/Img/<%= prod.img %>" alt="<%= prod.nombre %>">
+                    </div>
+                    <div class="info-producto">
+                        <h3><%= prod.nombre %></h3>
+                        <p class="especificaciones"><%= prod.specs %></p>
+                        <ul>
+                            <li><i class="fa-solid fa-microchip"></i> <%= prod.socket %></li>
+                            <li><i class="fa-solid fa-bolt"></i> <%= prod.tdp %></li>
+                        </ul>
+                    </div>
+                    <div class="accion-producto">
+                        <span class="precio"><%= prod.precio %></span>
+                        <button>Comprar</button>
+                    </div>
+                </article>
+            <% }) %>
+        </main>
+    </div>
+
+    
+    <script>
+        const menuLateral = document.getElementById('menu-lateral');
+        document.getElementById('btn-abrir-menu').addEventListener('click', () => menuLateral.classList.add('activo'));
+        document.getElementById('btn-cerrar-menu').addEventListener('click', () => menuLateral.classList.remove('activo'));
+    </script>
+</body>
+</html>

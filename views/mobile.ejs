@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Hardware - AWD Móvil</title>
+
+    <!-- ICONOS Y FUENTES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- ENLACE AL ARCHIVO CSS EN LA MISMA CARPETA VIEWS -->
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* SI ES MOVUL 1 COLUMNA */
+        .contenedor-productos { display: flex; flex-direction: column; gap: 1rem; padding: 1rem; }
+    </style>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="logo">
+            <i class="fa-solid fa-server"></i>
+            <h1>Hardware.p (Móvil)</h1>
+        </div>
+        <a href="#" class="btn-carrito"><i class="fa-solid fa-shopping-cart"></i></a>
+    </header>
+
+    <main class="contenedor-productos">
+        <% productos.forEach(prod => { %>
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="/Img/<%= prod.img %>" alt="<%= prod.nombre %>">
+                </div>
+                <div class="info-producto">
+                    <h3><%= prod.nombre %></h3>
+                    <p class="especificaciones"><%= prod.specs %></p>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio"><%= prod.precio %></span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+        <% }) %>
+    </main>
+</body>
+</html>

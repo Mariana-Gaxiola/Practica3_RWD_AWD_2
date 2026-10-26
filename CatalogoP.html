@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Hardware - RWD</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Catalogo1.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <!-- BOTON DE MENU Y LOGO -->
+        <div class="grupo-izquierdo">
+            <button id="btn-abrir-menu" class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fa-solid fa-server"></i>
+                <h1>Hardware.p</h1>
+            </div>
+        </div>
+
+        <!-- EL MENÚ LATERAL-->
+        <nav id="menu-lateral" class="panel-navegacion">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="btn-cerrar-menu" class="btn-cerrar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- MENU -->
+            <div class="enlaces-menu">
+                <a href="#">Catálogo</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Soporte</a>
+            </div>
+
+            <hr class="separador">
+
+            <!-- FILTROS -->
+            <div class="filtros-menu">
+                <h2>Filtros Avanzados</h2>
+                <div class="grupo-filtro">
+                    <h3>Categoría</h3>
+                    <label><input type="checkbox"> Procesadores (CPU)</label>
+                    <label><input type="checkbox"> Memoria RAM (ECC)</label>
+                    <label><input type="checkbox"> Almacenamiento NVMe</label>
+                </div>
+                <!-- GRÁFICO DE COMPARATIVA REQUERIDO POR LA PRÁCTICA -->
+                <!--BOTON DE APLICAR FILTROS-->
+                <button class="btn-aplicar">Aplicar Filtros</button>
+            </div>
+        </nav>
+
+        <!-- ICONOS DERECHOS -->
+        <div class="iconos-usuario">
+            <a href="#" class="btn-carrito"><i class="fa-solid fa-shopping-cart"></i></a>
+            <a href="#" class="avatar-icono"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <div class="contenedor-layout">
+        <!-- CUADRÍCULA DE PRODUCTOS  -->
+        <main class="contenedor-productos">
+            
+            <!-- CPU INTEL -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (10).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (10).jpg" type="image/jpeg">
+                    <img src="Img/images (10).jpg" alt="Procesador Intel Xeon">
+                </picture>
+                <div class="info-producto">
+                    <h3>Intel Xeon Gold 6230</h3>
+                    <p class="especificaciones">20 Cores, 40 Threads, 2.10 GHz</p>
+                    <ul>
+                        <li><i class="fa-solid fa-microchip"></i> Socket LGA 3647</li>
+                        <li><i class="fa-solid fa-bolt"></i> 125W TDP</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$1,299.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- CPU AMD -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/712FmtRt-EL.jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/712FmtRt-EL.jpg" type="image/jpeg">
+                    <img src="Img/712FmtRt-EL.jpg" alt="AMD EPYC 7763">
+                </picture>
+                <div class="info-producto">
+                    <h3>AMD EPYC 7763</h3>
+                    <p class="especificaciones">64 Cores, 128 Threads, 2.45 GHz</p>
+                    <ul>
+                        <li><i class="fa-solid fa-microchip"></i> Socket SP3</li>
+                        <li><i class="fa-solid fa-bolt"></i> 280W TDP</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$3,500.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- MEMORIA RAM DDR4 -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (1).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (1).jpg" type="image/jpeg">
+                    <img src="Img/images (1).jpg" alt="Memoria RAM Samsung 64GB DDR4">
+                </picture>
+                <div class="info-producto">
+                    <h3>Samsung 64GB DDR4 ECC</h3>
+                    <p class="especificaciones">3200 MHz, 288-pin RDIMM</p>
+                    <ul>
+                        <li><i class="fa-solid fa-memory"></i> Datacenter ECC</li>
+                        <li><i class="fa-solid fa-bolt"></i> 1.2V</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$250.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- MEMORIA RAM DDR5 -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images.jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images.jpg" type="image/jpeg">
+                    <img src="Img/images.jpg" alt="Memoria RAM Micron 128GB DDR5">
+                </picture>
+                <div class="info-producto">
+                    <h3>Micron 128GB DDR5</h3>
+                    <p class="especificaciones">4800 MHz, Alta densidad LRDIMM</p>
+                    <ul>
+                        <li><i class="fa-solid fa-memory"></i> Datacenter ECC</li>
+                        <li><i class="fa-solid fa-bolt"></i> 1.1V</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$899.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- MEMORIA SSD OPTANE -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (2).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (2).jpg" type="image/jpeg">
+                    <img src="Img/images (2).jpg" alt="Intel Optane SSD P5800X">
+                </picture>
+                <div class="info-producto">
+                    <h3>Intel Optane SSD P5800X</h3>
+                    <p class="especificaciones">1.6TB, U.2 PCIe 4.0 NVMe</p>
+                    <ul>
+                        <li><i class="fa-solid fa-hard-drive"></i> 100 DWPD (Resistencia)</li>
+                        <li><i class="fa-solid fa-gauge-high"></i> 7200 MB/s Lectura</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$1,800.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- MEMORIA SSD NVME -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (3).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (3).jpg" type="image/jpeg">
+                    <img src="Img/images (3).jpg" alt="Samsung PM9A3 3.84TB">
+                </picture>
+                <div class="info-producto">
+                    <h3>Samsung PM9A3 3.84TB</h3>
+                    <p class="especificaciones">U.2 Datacenter SSD, PCIe 4.0</p>
+                    <ul>
+                        <li><i class="fa-solid fa-hard-drive"></i> V-NAND TLC</li>
+                        <li><i class="fa-solid fa-gauge-high"></i> 6800 MB/s Lectura</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$450.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- MEMORIA HDD ENTERPRISE -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (4).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (4).jpg" type="image/jpeg">
+                    <img src="Img/images (4).jpg" alt="Disco duro Seagate Exos X18 18TB">
+                </picture>
+                <div class="info-producto">
+                    <h3>Seagate Exos X18 18TB</h3>
+                    <p class="especificaciones">HDD Enterprise 7200 RPM, SATA 6Gb/s</p>
+                    <ul>
+                        <li><i class="fa-solid fa-database"></i> Llenado de Helio</li>
+                        <li><i class="fa-solid fa-microchip"></i> 256MB Cache</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$320.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- ADAPTADOR DE RED -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (5).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (5).jpg" type="image/jpeg">
+                    <img src="Img/images (5).jpg" alt="Adaptador de red Mellanox ConnectX-6">
+                </picture>
+                <div class="info-producto">
+                    <h3>Mellanox ConnectX-6 Dx</h3>
+                    <p class="especificaciones">Adaptador de red 100GbE</p>
+                    <ul>
+                        <li><i class="fa-solid fa-network-wired"></i> Dual-Port QSFP56</li>
+                        <li><i class="fa-solid fa-microchip"></i> Interfaz PCIe 4.0</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$650.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- CONTROLADORA RAID -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (6).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (6).jpg" type="image/jpeg">
+                    <img src="Img/images (6).jpg" alt="Controladora RAID Broadcom MegaRAID">
+                </picture>
+                <div class="info-producto">
+                    <h3>Broadcom MegaRAID 9560</h3>
+                    <p class="especificaciones">Controladora RAID PCIe 4.0</p>
+                    <ul>
+                        <li><i class="fa-solid fa-hdd"></i> 8 Puertos NVMe/SAS</li>
+                        <li><i class="fa-solid fa-memory"></i> 8GB Cache Integrado</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$720.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- FUENTE DE PODER -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (7).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (7).jpg" type="image/jpeg">
+                    <img src="Img/images (7).jpg" alt="Fuente de poder Supermicro 1200W">
+                </picture>
+                <div class="info-producto">
+                    <h3>Supermicro 1200W PSU</h3>
+                    <p class="especificaciones">Fuente de Poder Hot-swap Redundante</p>
+                    <ul>
+                        <li><i class="fa-solid fa-plug"></i> 80 Plus Titanium</li>
+                        <li><i class="fa-solid fa-server"></i> Formato 1U/2U</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$180.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- GPU A100 -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (8).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (8).jpg" type="image/jpeg">
+                    <img src="Img/images (8).jpg" alt="NVIDIA A100 Tensor Core">
+                </picture>
+                <div class="info-producto">
+                    <h3>NVIDIA A100 Tensor Core</h3>
+                    <p class="especificaciones">Acelerador de IA para Datacenter</p>
+                    <ul>
+                        <li><i class="fa-solid fa-microchip"></i> 80GB HBM2e VRAM</li>
+                        <li><i class="fa-solid fa-bolt"></i> 300W TDP</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$10,500.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+            <!-- GPU T4 -->
+            <article class="tarjeta-producto">
+                <picture class="imagen-producto">
+                    <source media="(min-width: 1024px)" srcset="Img/images (9).jpg" type="image/jpeg">
+                    <source media="(max-width: 639px)" srcset="Img/images (9).jpg" type="image/jpeg">
+                    <img src="Img/images (9).jpg" alt="NVIDIA Tesla T4">
+                </picture>
+                <div class="info-producto">
+                    <h3>NVIDIA Tesla T4</h3>
+                    <p class="especificaciones">Acelerador de Inferencia de Bajo Perfil</p>
+                    <ul>
+                        <li><i class="fa-solid fa-microchip"></i> 16GB GDDR6</li>
+                        <li><i class="fa-solid fa-bolt"></i> 75W TDP (Sin cable PCIe)</li>
+                    </ul>
+                </div>
+                <div class="accion-producto">
+                    <span class="precio">$1,200.00</span>
+                    <button>Comprar</button>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <!--FUNCIONAMIENTO DE LA BARRA LATERIAL-->
+    <script>
+        const menuLateral = document.getElementById('menu-lateral');
+        
+        document.getElementById('btn-abrir-menu').addEventListener('click', () => {
+            menuLateral.classList.add('activo');
+        });
+        
+        document.getElementById('btn-cerrar-menu').addEventListener('click', () => {
+            menuLateral.classList.remove('activo');
+        });
+    </script>
+</body>
+</html>

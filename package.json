@@ -1,0 +1,12 @@
+{
+    "name": "catalogo-hardware-awd",
+    "version": "1.0.0",
+    "description": "Implementación AWD con Express y express-useragent",
+    "main": "server.js",
+    "dependencies": 
+    {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-useragent": "^1.0.15"
+    }
+}
